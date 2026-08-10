@@ -1,0 +1,85 @@
+/* =====================================================================
+   menu.js  —  定番商品リスト
+   商品を足す / 減らす / 値段やフレーバーを変える時にここを編集します。
+   （毎週は触りません。定番の内容が変わった時だけ。）
+
+   1商品の書き方:
+   {
+     id: "英数字の名前（他とかぶらないもの・写真ファイル名にも使う）",
+     jp: "日本語名",
+     en: "英語名",
+     image: "写真ファイル名（assets/images/の中。無ければ空 "" ）",
+     flavors: [
+       { jp:"味の名前", en:"英語名", price: 値段の数字 },
+       ...
+     ],
+   }
+   ※ フレーバーが1種類だけの商品も、flavors に1つだけ入れればOKです。
+   ===================================================================== */
+window.STANDARD_ITEMS = [
+  {
+    id: "daifuku", jp: "大福", en: "Daifuku", image: "",
+    flavors: [
+      { jp: "普通", en: "Plain", price: 5 },
+      { jp: "苺", en: "Strawberry", price: 7 },
+    ],
+  },
+  {
+    id: "ohagi", jp: "おはぎ", en: "Ohagi", image: "",
+    flavors: [
+      { jp: "おはぎ", en: "Ohagi", price: 5 },
+    ],
+  },
+  {
+    id: "karinto", jp: "かりんとう", en: "Karinto", image: "",
+    flavors: [
+      { jp: "プレーン", en: "Plain", price: 7 },
+      { jp: "黒糖", en: "Brown Sugar", price: 7 },
+      { jp: "抹茶", en: "Matcha", price: 7 },
+    ],
+  },
+  {
+    id: "taiyaki", jp: "たい焼き", en: "Taiyaki", image: "",
+    flavors: [
+      { jp: "あんこ", en: "Red Bean", price: 4 },
+      { jp: "クリームチーズ", en: "Cream Cheese", price: 4 },
+      { jp: "チョコレート", en: "Chocolate", price: 4 },
+    ],
+  },
+  {
+    id: "chiffon", jp: "シフォンケーキ", en: "Chiffon Cake", image: "",
+    flavors: [
+      { jp: "オレンジ", en: "Orange", price: 11 },
+      { jp: "レモン", en: "Lemon", price: 12 },
+      { jp: "抹茶小豆", en: "Matcha Red Bean", price: 14 },
+      { jp: "チョコレート", en: "Chocolate", price: 13 },
+      { jp: "バナナ", en: "Banana", price: 11 },
+      { jp: "苺", en: "Strawberry", price: 14 },
+      { jp: "コーヒー", en: "Coffee", price: 11 },
+      { jp: "紅茶", en: "Black Tea", price: 12 },
+    ],
+  },
+  {
+    id: "pan", jp: "パン", en: "Bread", image: "",
+    flavors: [
+      { jp: "あんぱん", en: "Anpan (Red Bean Bun)", price: 4 },
+      { jp: "クリームチーズ", en: "Cream Cheese", price: 4 },
+      { jp: "あんこと餅", en: "Red Bean & Mochi", price: 4 },
+      { jp: "クランベリー全粒粉", en: "Cranberry Whole Wheat", price: 6 },
+    ],
+  },
+];
+
+/* =====================================================================
+   販売スケジュール（カレンダーに色をつける日）
+   毎月変わるので、月初めにここを更新すると分かりやすいです。
+   ・kioskDays  ... キオスク販売日（土日など）の「日にち」を並べる
+   ・onlineDays ... オンライン販売日（水など）の「日にち」を並べる
+   ・specialNote... カレンダー下の「今月の特別販売」の文章（不要なら "" ）
+   ===================================================================== */
+window.SALES_SCHEDULE = {
+  kioskDays: [22, 23],
+  onlineDays: [26, 30],
+  specialNoteJp: "30日（日）に特別オンライン販売を実施します。ご注文締切は27日（木）です。",
+  specialNoteEn: "Special online sale on the 30th (Sun). Order deadline: the 27th (Thu).",
+};

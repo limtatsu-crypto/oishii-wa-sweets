@@ -1,15 +1,10 @@
 /* =====================================================================
-   定番商品リスト / STANDARD MENU
-   ---------------------------------------------------------------------
-   めったに変えません。商品を足す/減らすときだけ触ります。
-   jp = 日本語名, en = 英語名, photo = 写真ファイル名（なければ ""）
+   config.js  —  サイト全体の基本設定
+   ここは基本的に触らなくてOKです。WhatsApp番号を変える時だけ編集。
    ===================================================================== */
-
-window.STANDARD_ITEMS = [
-  { id: "daifuku", jp: "大福",        en: "Daifuku",      photo: "" },
-  { id: "ohagi",   jp: "おはぎ",      en: "Ohagi",        photo: "" },
-  { id: "karinto", jp: "かりんとう",  en: "Karinto",      photo: "" },
-  { id: "taiyaki", jp: "たい焼き",    en: "Taiyaki",      photo: "" },
-  { id: "chiffon", jp: "シフォンケーキ", en: "Chiffon Cake", photo: "" },
-  { id: "pan",     jp: "パン",        en: "Bread",        photo: "" },
-];
+window.SITE_CONFIG = {
+  // WhatsApp番号（国番号込み・数字のみ）
+  whatsappNumber: "60169776286",
+  // 画面に表示する電話番号
+  whatsappDisplay: "016-9776 286",
+};

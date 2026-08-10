@@ -1,34 +1,28 @@
-/* =====================================================================
-   毎週ここだけ書き換えます / EDIT THIS FILE EACH WEEK
-   ---------------------------------------------------------------------
-   ・"" の中の文字を書き換えるだけ。記号（ , や " ）は消さないでね。
-   ・写真は images フォルダに入れて、ファイル名をここに書きます。
-   ===================================================================== */
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oishii 和 Sweets — Handmade Wagashi, Kuala Lumpur</title>
+  <meta name="description" content="クアラルンプールの手作り和菓子。週末は対面キオスク、平日はWhatsAppからオンライン注文でお届けします。">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { background: #FAF6EE; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
 
-window.WEEKLY_SPECIAL = {
-
-  // 今週の限定商品の名前（日本語）
-  titleJP: "限定の大福・和菓子",
-
-  // 今週の限定商品の名前（英語）
-  titleEN: "Limited-Edition Daifuku & Wagashi",
-
-  // 説明文（日本語）
-  descJP: "数量限定・売り切れ次第終了です。詳細・価格はWhatsAppでご確認ください。",
-
-  // 説明文（英語）
-  descEN: "Quantity limited, while stocks last. Ask WhatsApp for details & price.",
-
-  // 今週の写真ファイル名（images フォルダに入れた写真の名前）
-  // 例: "images/sakura-daifuku.jpg"
-  // まだ写真がなければ "" のままでOK（プレースホルダーが出ます）
-  photo: "",
-
-  // 「残りわずか」バッジを出す？  true = 出す / false = 出さない
-  showLimitedBadge: true,
-
-  // 注文締切の曜日と時刻（カウントダウン用）
-  // deadlineDay: 0=日 1=月 2=火 3=水 4=木 5=金 6=土
-  deadlineDay: 4,      // 木曜
-  deadlineHour: 18,    // 18時
-};
+  <!-- データファイル（ここを編集して内容を更新します） -->
+  <script src="config.js"></script>
+  <script src="week.js"></script>
+  <script src="menu.js"></script>
+  <!-- サイト本体（触らなくてOK） -->
+  <script src="app.js"></script>
+</body>
+</html>
