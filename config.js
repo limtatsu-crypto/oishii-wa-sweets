@@ -8,3 +8,4 @@ window.SITE_CONFIG = {
   // 画面に表示する電話番号
   whatsappDisplay: "016-9776 286",
 };
+
