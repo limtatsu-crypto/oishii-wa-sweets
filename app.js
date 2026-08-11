@@ -384,7 +384,7 @@
     return '<div>' +
       '<section style="padding:40px 20px 10px;text-align:center;background:radial-gradient(circle at 50% 0%, rgba(198,54,43,0.08), transparent 60%)">' +
       '<h1 style="font-family:\'Noto Serif JP\',serif;font-weight:900;font-size:24px;margin:0 0 6px;color:' + C.dark + '">ブランドストーリー</h1><p style="font-size:14px;color:' + C.brown + ';margin:0">Our Story</p></section>' +
-      '<section style="padding:20px 20px 10px"><div style="max-width:480px;margin:0 auto">' + imageSlot("", "和菓子づくりの様子 / Making wagashi", "width:100%;height:240px;") + '</div></section>' +
+      '<section style="padding:20px 20px 10px"><div style="max-width:480px;margin:0 auto">' + imageSlot("azuki.jpg", "和菓子づくりの様子 / Making wagashi", "width:100%;height:240px;") + '</div></section>' +
       '<section style="padding:20px 20px 30px"><div style="max-width:480px;margin:0 auto;text-align:center">' +
       '<h2 style="font-family:\'Noto Serif JP\',serif;font-weight:900;font-size:19px;line-height:1.7;margin:0 0 14px;color:' + C.dark + '">日本の手作りの和菓子を、<br/>クアラルンプールで楽しめます。</h2>' +
       '<p style="font-size:13px;color:' + C.brown + ';margin:0 0 18px">Handmade Japanese wagashi, made to enjoy right here in Kuala Lumpur.</p>' +

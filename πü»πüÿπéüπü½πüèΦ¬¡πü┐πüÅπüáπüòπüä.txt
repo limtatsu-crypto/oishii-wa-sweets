@@ -1,85 +1,40 @@
-/* =====================================================================
-   menu.js  —  定番商品リスト
-   商品を足す / 減らす / 値段やフレーバーを変える時にここを編集します。
-   （毎週は触りません。定番の内容が変わった時だけ。）
+======================================================
+ Oishii 和 Sweets ウェブサイト ファイル一式（写真入り完成版）
+======================================================
 
-   1商品の書き方:
-   {
-     id: "英数字の名前（他とかぶらないもの・写真ファイル名にも使う）",
-     jp: "日本語名",
-     en: "英語名",
-     image: "写真ファイル名（assets/images/の中。無ければ空 "" ）",
-     flavors: [
-       { jp:"味の名前", en:"英語名", price: 値段の数字 },
-       ...
-     ],
-   }
-   ※ フレーバーが1種類だけの商品も、flavors に1つだけ入れればOKです。
-   ===================================================================== */
-window.STANDARD_ITEMS = [
-  {
-    id: "daifuku", jp: "大福", en: "Daifuku", image: "",
-    flavors: [
-      { jp: "普通", en: "Plain", price: 5 },
-      { jp: "苺", en: "Strawberry", price: 7 },
-    ],
-  },
-  {
-    id: "ohagi", jp: "おはぎ", en: "Ohagi", image: "",
-    flavors: [
-      { jp: "おはぎ", en: "Ohagi", price: 5 },
-    ],
-  },
-  {
-    id: "karinto", jp: "かりんとう", en: "Karinto", image: "",
-    flavors: [
-      { jp: "プレーン", en: "Plain", price: 7 },
-      { jp: "黒糖", en: "Brown Sugar", price: 7 },
-      { jp: "抹茶", en: "Matcha", price: 7 },
-    ],
-  },
-  {
-    id: "taiyaki", jp: "たい焼き", en: "Taiyaki", image: "",
-    flavors: [
-      { jp: "あんこ", en: "Red Bean", price: 4 },
-      { jp: "クリームチーズ", en: "Cream Cheese", price: 4 },
-      { jp: "チョコレート", en: "Chocolate", price: 4 },
-    ],
-  },
-  {
-    id: "chiffon", jp: "シフォンケーキ", en: "Chiffon Cake", image: "",
-    flavors: [
-      { jp: "オレンジ", en: "Orange", price: 11 },
-      { jp: "レモン", en: "Lemon", price: 12 },
-      { jp: "抹茶小豆", en: "Matcha Red Bean", price: 14 },
-      { jp: "チョコレート", en: "Chocolate", price: 13 },
-      { jp: "バナナ", en: "Banana", price: 11 },
-      { jp: "苺", en: "Strawberry", price: 14 },
-      { jp: "コーヒー", en: "Coffee", price: 11 },
-      { jp: "紅茶", en: "Black Tea", price: 12 },
-    ],
-  },
-  {
-    id: "pan", jp: "パン", en: "Bread", image: "",
-    flavors: [
-      { jp: "あんぱん", en: "Anpan (Red Bean Bun)", price: 4 },
-      { jp: "クリームチーズ", en: "Cream Cheese", price: 4 },
-      { jp: "あんこと餅", en: "Red Bean & Mochi", price: 4 },
-      { jp: "クランベリー全粒粉", en: "Cranberry Whole Wheat", price: 6 },
-    ],
-  },
-];
+【毎週の更新でさわるファイル】
+  week.js  ... 今週の限定商品。名前・値段・説明・写真をここで変える。
 
-/* =====================================================================
-   販売スケジュール（カレンダーに色をつける日）
-   毎月変わるので、月初めにここを更新すると分かりやすいです。
-   ・kioskDays  ... キオスク販売日（土日など）の「日にち」を並べる
-   ・onlineDays ... オンライン販売日（水など）の「日にち」を並べる
-   ・specialNote... カレンダー下の「今月の特別販売」の文章（不要なら "" ）
-   ===================================================================== */
-window.SALES_SCHEDULE = {
-  kioskDays: [22, 23],
-  onlineDays: [26, 30],
-  specialNoteJp: "30日（日）に特別オンライン販売を実施します。ご注文締切は27日（木）です。",
-  specialNoteEn: "Special online sale on the 30th (Sun). Order deadline: the 27th (Thu).",
-};
+【たまにさわるファイル】
+  menu.js   ... 定番商品リストと販売スケジュール（カレンダーの色）。
+  config.js ... WhatsApp番号。
+
+【さわらなくていいファイル】
+  index.html ... サイトの入り口。
+  app.js     ... サイトの動き。
+  wrangler.toml ... Cloudflare公開用の設定（これが無いと真っ白になります。消さないこと）。
+  assets/logo.png ... ロゴ。
+  assets/images/ ... 商品・雰囲気写真。
+
+【写真の差し替え方】
+  1. 新しい写真を assets/images/ に入れる（例: daifuku2.jpg）
+  2. week.js や menu.js の image: "..." のファイル名を書き換える
+  3. GitHubにアップして更新。
+
+【今入っている写真】
+  daifuku.jpg（大福・今週の限定）, ohagi.jpg（おはぎ）,
+  karinto.jpg（かりんとう）, taiyaki.jpg（たい焼き）,
+  chiffon.jpg / chiffon-orange.jpg（シフォン）, pan.jpg（パン）,
+  azuki.jpg（小豆・STORY）, tea-daifuku.jpg（予備の雰囲気写真）
+
+======================================================
+ GitHubでの更新のしかた（毎回同じ）
+======================================================
+  1. github.com →「oishii-wa-sweets」を開く
+  2.「Add file」→「Upload files」
+  3. 変えたファイル（フォルダの中身）をドラッグ&ドロップ
+  4. 緑ボタン「Commit changes」を押す
+  5. 数分待つと公開サイトが自動更新
+     公開URL: https://mute-breeze-684a.limtatsu.workers.dev
+     （すぐ変わらない時は Ctrl+F5）
+======================================================

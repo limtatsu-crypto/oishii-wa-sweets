@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oishii 和 Sweets — Handmade Wagashi, Kuala Lumpur</title>
-  <meta name="description" content="クアラルンプールの手作り和菓子。週末は対面キオスク、平日はWhatsAppからオンライン注文でお届けします。">
-  <link rel="icon" href="assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body { background: #FAF6EE; }
-  </style>
-</head>
-<body>
-  <div id="app"></div>
+/* =====================================================================
+   week.js  —  今週の限定商品
+   ★ 毎週ここだけ書き換えれば「今週の限定」が更新されます ★
 
-  <!-- データファイル（ここを編集して内容を更新します） -->
-  <script src="config.js"></script>
-  <script src="week.js"></script>
-  <script src="menu.js"></script>
-  <!-- サイト本体（触らなくてOK） -->
-  <script src="app.js"></script>
-</body>
-</html>
+   ・nameJp / nameEn ... 商品名（日本語 / 英語）
+   ・priceLabel ....... 価格の表示（例: "RM7 / 個"）
+   ・descJp / descEn .. 説明文（日本語 / 英語）
+   ・image ............ 写真ファイル名。assets/images/ に入れた写真の名前。
+                        写真がまだ無い時は "" （空）にしておくと
+                        「準備中」のプレースホルダーが出ます。
+   ===================================================================== */
+window.WEEKLY_SPECIAL = {
+  nameJp: "北海道黒豆大福",
+  nameEn: "Hokkaido Black Soybean Daifuku",
+  priceLabel: "RM7 / 個",
+  priceEn: "RM7 / piece",
+  // まとめ注文の計算に使う1個あたりの価格（数字だけ）
+  unitPrice: 7,
+  descJp: "北海道産の黒豆を、蜜でふっくらと炊き上げました。やさしい手作りのあんことほっくりとした豆の食感は上品な味わいです。北海道の恵みをひとつひとつ丁寧に包みました。",
+  descEn: "Plump Hokkaido black soybeans, gently simmered in syrup. Soft handmade red bean paste meets the mellow texture of the beans for a refined taste — each one wrapped with care, a gift from Hokkaido.",
+  // 写真ファイル名（assets/images/ の中）。無ければ "" のままでOK
+  image: "daifuku.jpg",
+};
