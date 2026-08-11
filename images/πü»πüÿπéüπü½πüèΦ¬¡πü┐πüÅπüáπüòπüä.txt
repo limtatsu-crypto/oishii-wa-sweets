@@ -1,0 +1,40 @@
+======================================================
+ Oishii 和 Sweets ウェブサイト ファイル一式（写真入り完成版）
+======================================================
+
+【毎週の更新でさわるファイル】
+  week.js  ... 今週の限定商品。名前・値段・説明・写真をここで変える。
+
+【たまにさわるファイル】
+  menu.js   ... 定番商品リストと販売スケジュール（カレンダーの色）。
+  config.js ... WhatsApp番号。
+
+【さわらなくていいファイル】
+  index.html ... サイトの入り口。
+  app.js     ... サイトの動き。
+  wrangler.toml ... Cloudflare公開用の設定（これが無いと真っ白になります。消さないこと）。
+  assets/logo.png ... ロゴ。
+  assets/images/ ... 商品・雰囲気写真。
+
+【写真の差し替え方】
+  1. 新しい写真を assets/images/ に入れる（例: daifuku2.jpg）
+  2. week.js や menu.js の image: "..." のファイル名を書き換える
+  3. GitHubにアップして更新。
+
+【今入っている写真】
+  daifuku.jpg（大福・今週の限定）, ohagi.jpg（おはぎ）,
+  karinto.jpg（かりんとう）, taiyaki.jpg（たい焼き）,
+  chiffon.jpg / chiffon-orange.jpg（シフォン）, pan.jpg（パン）,
+  azuki.jpg（小豆・STORY）, tea-daifuku.jpg（予備の雰囲気写真）
+
+======================================================
+ GitHubでの更新のしかた（毎回同じ）
+======================================================
+  1. github.com →「oishii-wa-sweets」を開く
+  2.「Add file」→「Upload files」
+  3. 変えたファイル（フォルダの中身）をドラッグ&ドロップ
+  4. 緑ボタン「Commit changes」を押す
+  5. 数分待つと公開サイトが自動更新
+     公開URL: https://mute-breeze-684a.limtatsu.workers.dev
+     （すぐ変わらない時は Ctrl+F5）
+======================================================
