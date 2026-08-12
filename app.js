@@ -24,7 +24,7 @@
     var s = styleExtra || "";
     if (file) {
       return '<div style="' + s + 'border-radius:14px;overflow:hidden;background:#efe7db">' +
-        '<img src="images/' + esc(file) + '" alt="' + esc(placeholder) + '" style="width:100%;height:100%;object-fit:cover;display:block"/></div>';
+        '<img src="https://raw.githubusercontent.com/limtatsu-crypto/oishii-wa-sweets/main/images/' + esc(file) + '" alt="' + esc(placeholder) + '" style="width:100%;height:100%;object-fit:cover;display:block"/></div>';
     }
     return '<div style="' + s + 'border-radius:14px;background:repeating-linear-gradient(45deg,#f2ece1,#f2ece1 10px,#efe7db 10px,#efe7db 20px);border:1.5px dashed rgba(198,54,43,0.35);display:flex;align-items:center;justify-content:center;text-align:center;color:#9a7c66;font-size:12px;padding:8px;line-height:1.5">' + esc(placeholder) + '</div>';
   }
